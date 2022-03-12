@@ -18,7 +18,7 @@ function Menu(props){
             <a href="#Inicio" class="link">Inicio</a>
             {isAuthenticated ? (
             <>
-            <a href="#Lista de Peliculas" class="link">ListaPeliculas</a>
+            <a href="#ListaPeliculas" class="link">Lista de Peliculas</a>
             <Profile />
             <LogoutButton />
             </>
