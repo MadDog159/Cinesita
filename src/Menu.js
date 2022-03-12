@@ -4,7 +4,6 @@ import {LoginButton} from './Login'
 import {LogoutButton} from './Logout'
 import {Profile} from './Profile'
 import {useAuth0} from '@auth0/auth0-react'
-import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap"
 
 function Menu(props){
@@ -17,6 +16,10 @@ function Menu(props){
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
                         <Nav.Link href="/">Home</Nav.Link>
+                        <form action="/action_page.php">
+                        <input type="text" placeholder="Search.." name="search"></input>
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
                         {isAuthenticated ? (
                         <>
                             <Nav.Link href='/listaPeliculas'>Lista de Peliculas</Nav.Link>
@@ -29,10 +32,7 @@ function Menu(props){
                 </Navbar.Collapse>
         </Navbar><header>
                 <nav class="navbar">
-                    <form action="/action_page.php">
-                        <input type="text" placeholder="Search.." name="search"></input>
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                    
                     <a to='/' class="link">Inicio</a>
                     
 

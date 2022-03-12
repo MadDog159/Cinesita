@@ -11,7 +11,7 @@ import MovieBox from "./MovieBox";
         useEffect(() => {
           axios
             .get(
-              `https://api.themoviedb.org/3/movie/top_rated?api_key=531c8779023f70f5ec45da60cc337e58&language=en-US&page=${page}`
+              `https://api.themoviedb.org/3/movie/top_rated?api_key=dea5d1d72df02ec5cc84f8afd612808b&language=es-MX&page=${page}`
             )
             .then(({ data }) => setList(data.results))
             .catch((err) => console.log(err));

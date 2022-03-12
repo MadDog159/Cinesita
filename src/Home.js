@@ -8,7 +8,7 @@ const Home = () => {
   useEffect(() => {
     axios
       .get(
-        `https://api.themoviedb.org/3/trending/movie/week?api_key=dea5d1d72df02ec5cc84f8afd612808b&language=es-MX&page=1`
+        `https://api.themoviedb.org/3/movie/upcoming?api_key=dea5d1d72df02ec5cc84f8afd612808b&language=es-MX&page=1`
       )
       .then(({ data }) => setList(data.results))
       .catch((err) => console.log(err));
