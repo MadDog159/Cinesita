@@ -16,7 +16,6 @@ function Menu(props){
 
                 <div className="actions">
                     <button className="button btn-blue">Buscar peliculas</button>
-
                 </div>
             </div>    
         </div>
