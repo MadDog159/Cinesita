@@ -18,15 +18,18 @@ function App(){
     }, [])
     <Route path='/search' element={<Search />} />*/
     return (
-      <><div className='app'>
-        <Menu title="Cinesita" />
-      </div><Router>
+      <>
+        <div className='app'>
+          <Menu title="Cinesita" />
+        </div>
+        <Router>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/ListaPeliculas' element={<List />} />
           </Routes>
 
-        </Router></>
+        </Router>
+      </>
     )
   
 }
