@@ -31,9 +31,6 @@ class App extends React.Component{
     return (
       <div className='app'>
         <Menu title="Cinesita" />
-        <Profile />
-        <LogoutButton />
-        <LoginButton />
       </div>
     )
   }
