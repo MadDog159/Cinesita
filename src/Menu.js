@@ -6,18 +6,17 @@ import {Profile} from './Profile'
 import {useAuth0} from '@auth0/auth0-react'
 import { Link } from "react-router-dom";
 import { Navbar, Nav } from "react-bootstrap"
-import './Menu.css'
 
 function Menu(props){
     const { isAuthenticated } = useAuth0();
 
     return(
         <><Navbar expand="lg">
-                <Navbar.Brand href="#home">Cinesita</Navbar.Brand>
+                <Navbar.Brand href="/">Cinesita</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
+                        <Nav.Link href="/">Home</Nav.Link>
                         {isAuthenticated ? (
                         <>
                             <Nav.Link href='/listaPeliculas'>Lista de Peliculas</Nav.Link>

@@ -12,7 +12,7 @@ export const Profile = () => {
 
     return(
         isAuthenticated &&(
-            <div class="w-50">
+            <div class="float-right">
                 <Card style={{ width: '15rem' }}>
                     <Card.Img variant="top" src={user.picture} alt={user.name} />
                     <Card.Body>
