@@ -15,12 +15,10 @@ function Menu(props){
                 <input type="text" placeholder="Search.." name="search"></input>
                 <button type="submit"><i class="fa fa-search"></i></button>
             </form>
-            <a href="#Experiencia" class="link">Experiencia</a>
-            <a href="#SobreMi" class="link">Sobre Mí</a>
-            <a href="#Habilidades" class="link">Habilidades</a>
-            <a href="#Contactame" class="link">Contactame</a>
+            <a href="#Inicio" class="link">Inicio</a>
             {isAuthenticated ? (
             <>
+            <a href="#Lista de Peliculas" class="link">ListaPeliculas</a>
             <Profile />
             <LogoutButton />
             </>
