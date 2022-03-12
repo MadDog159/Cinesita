@@ -26,3 +26,40 @@
   background-color:rgb(255, 255, 255);
   color: rgb(82, 82, 82);
 }
+
+header{
+  text-align: center;
+  align-items: center;
+  background: #4C566A;
+  padding: 21px 20px;
+}
+.link{
+  
+  text-decoration: none;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #012927;
+
+  border: none;
+  padding: 15px 25px;
+  text-align: center;
+  display: inline-block;
+      
+}
+
+.Navbar { 
+  background-color: #D8DEE9;
+  border-radius: 4px
+}
+
+/* NO TOCAR */
+.container{
+  width: 100%;
+
+}
+.grid{
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: 0.5em;
+}

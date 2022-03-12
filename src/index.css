@@ -12,29 +12,3 @@ code {
     monospace;
 }
 
-header{
-  text-align: center;
-  align-items: center;
-  background: #6d999969;
-  padding: 21px 20px;
-  border-radius: 8px;
-}
-.link{
-  
-  text-decoration: none;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: normal;
-  color: #012927;
-
-  border: none;
-  padding: 15px 25px;
-  text-align: center;
-  display: inline-block;
-      
-}
-
-.navbar a:hover { 
-  background-color: #86ace68c;
-  border-radius: 4px
-}
