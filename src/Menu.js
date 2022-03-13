@@ -44,6 +44,7 @@ function Menu(props){
             </Navbar>
             <header className="menu">
                     <nav class="navbar">
+                        
                         <form >
                             <input type="text" placeholder="Search.." className="form-control" onChange={handleInputChange} name="nombre"></input>
                             
