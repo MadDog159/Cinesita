@@ -6,17 +6,17 @@ const MovieBox = ({ list }) => {
   const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [j, setJ] = useState({});
-    console.log(j)
+    
+    
     
     useEffect(() => {
 
         fetch(`https://api.themoviedb.org/3/movie/${list.id}?api_key=dea5d1d72df02ec5cc84f8afd612808b&language=es-MX`).then(function(response) { 
-	// Convert to JSON
 	return response.json();
 }).then(function(response) {
-	setJ(response);
-	console.log(j);
-});}, [j]);
+    setJ(response);
+    
+});}, [show]);
 
         return (
             <>
@@ -51,12 +51,12 @@ const MovieBox = ({ list }) => {
                             alt={list.title}
                         />
                     </Modal.Body>
-                    <Modal.Body>■ Lista de Géneros: {j.budget}</Modal.Body>
+                    <Modal.Body>Lista de Géneros: {j.genres?.map((genero) => (<p key={genero.id}>{`■ ${genero.name} `}</p>))}</Modal.Body>
                     <Modal.Body>Lenguaje original: {list.original_language}</Modal.Body>
                     <Modal.Body>Presupuesto: {j.budget}</Modal.Body>
                     <Modal.Body>Descripción: {list.overview}</Modal.Body>
                     <Modal.Body>Rating de popularidad: {list.popularity}</Modal.Body>
-                    <Modal.Body>■ Compañías de producción: {j.budget}</Modal.Body>
+                    <Modal.Body>Compañías de producción: {j.production_companies?.map((company) => (<p key={company.id}>{`■ ${company.name} `}</p>))}</Modal.Body>
                     <Modal.Body>Fecha de lanzamiento: {list.release_date}</Modal.Body>
                     <Modal.Body>Estado de la película: {j.status}</Modal.Body>
                     <Modal.Footer>
