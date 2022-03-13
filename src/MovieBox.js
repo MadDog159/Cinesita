@@ -1,21 +1,28 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Card, Modal, Button } from "react-bootstrap";
 import Profile from "./Profile";
+
+
+
+
+
 const MovieBox = ({ list }) => {
     const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+    const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-    const j = useState();
-    
-    useEffect(() => {
+    const datosssss = (props)=> {}
+        const [j,setList] = useState();
+        useEffect(() => {
+            axios
+            .get(`https://api.themoviedb.org/3/movie/${list.id}?api_key=dea5d1d72df02ec5cc84f8afd612808b&language=es-MX`
+            )
+            .then(({datos})=>setList(datos.genres)
+            ).catch((err) => console.log(err));
+            },[j.datos]);
 
-        fetch(`https://api.themoviedb.org/3/movie/${list.id}?api_key=dea5d1d72df02ec5cc84f8afd612808b&language=es-MX`).then(function(response) { 
-	// Convert to JSON
-	return response.json();
-}).then(function(j) {
-	// Yay, `j` is a JavaScript object
-	console.log(j);
-});}, [j]);
+    
+
 
         return (
             <>
