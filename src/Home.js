@@ -15,13 +15,13 @@ const Home = () => {
   });
 
   return (
-    <div>
+    <><br></br><main>PROXIMAS A ESTRENAR</main><br></br><div>
       <div className="container">
         <div className="grid">
           {list && list.map((movie) => <MovieBox list={movie} />)}
         </div>
       </div>
-    </div>
+    </div></>
   );
 };
 

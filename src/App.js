@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './Menu'
 import Home from './Home';
 import List from './List';
+import Search from './Search';
 import {BrowserRouter as Router, Routes, Route}  from 'react-router-dom';
 
 
@@ -26,6 +27,7 @@ function App(){
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/ListaPeliculas' element={<List />} />
+            <Route path='/Search' element={<Search />} />
           </Routes>
 
         </Router>

@@ -7,10 +7,13 @@ import {useAuth0} from '@auth0/auth0-react'
 import { Navbar, Nav } from "react-bootstrap"
 import {useState} from "react"
 import './Menu.css'
+import { createSearchParams } from "react-router-dom";
 
 function Menu(props){
     const { isAuthenticated } = useAuth0();
     const [modalOpen, setModalOpen] = useState(false);
+    
+
     return(
 
         <>
@@ -37,9 +40,9 @@ function Menu(props){
             </Navbar>
             <header className="menu">
                     <nav class="navbar">
-                        <form action="/action_page.php">
+                        <form action='/Search'>
                             <input type="text" placeholder="Search.." name="search"></input>
-                            <button type="submit"><i className="fa fa-search"></i></button>
+                            <button type="submit" value="Submit"><i className="fa fa-search"></i></button>
                         </form>
                         <a to='/' className="link">Inicio</a>
                         
