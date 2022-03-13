@@ -11,6 +11,13 @@ import './Menu.css'
 function Menu(props){
     const { isAuthenticated } = useAuth0();
     const [modalOpen, setModalOpen] = useState(false);
+    const handleInputChange = (e) => {
+        console.log(e.target.value)
+        // console.log(event.target.value)
+        props.setSearchMovie(e.target.value)
+        
+        
+    }
     return(
 
         <>
@@ -37,9 +44,10 @@ function Menu(props){
             </Navbar>
             <header className="menu">
                     <nav class="navbar">
-                        <form action="/action_page.php">
-                            <input type="text" placeholder="Search.." name="search"></input>
-                            <button type="submit"><i className="fa fa-search"></i></button>
+                        <form >
+                            <input type="text" placeholder="Search.." className="form-control" onChange={handleInputChange} name="nombre"></input>
+                            
+                            
                         </form>
                         <a to='/' className="link">Inicio</a>
                         

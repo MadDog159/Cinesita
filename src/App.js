@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from './Menu'
@@ -17,15 +17,20 @@ function App(){
       fetchApi()
     }, [])
     <Route path='/search' element={<Search />} />*/
+    const [search,setSearch]=useState(null)
+    useEffect(()=>{
+      console.log("Esto es en app : ",search)
+    },[search])
     return (
       <>
         <div className='app'>
-          <Menu title="Cinesita" />
+          <Menu setSearchMovie={setSearch}/>
+          
         </div>
         <Router>
           <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/ListaPeliculas' element={<List />} />
+            <Route path='/' element={<Home search={search} />} />
+            <Route path='/ListaPeliculas' element={<List search={search}/>} />
           </Routes>
 
         </Router>
