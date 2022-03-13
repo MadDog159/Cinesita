@@ -24,7 +24,7 @@ const Home = (props) => {
       <div>
         <div className="container">
           <div className="grid">
-            {list && list.map((movie) => <MovieBox list={movie} />)}
+            {list && list.map((movie, i) => <MovieBox key={i} list={movie} />)}
           </div>
         </div>
       </div>

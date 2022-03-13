@@ -30,7 +30,7 @@ const List = (props) => {
       <Item page={page} setPage={setPage} />
       <div className="container">
         <div className="grid">
-          {list && list.map((movie) => <MovieBox list={movie} />)}
+          {list && list.map((movie, i) => <MovieBox key={i} list={movie} />)}
         </div>
         <Item page={page} setPage={setPage} />
       </div>
