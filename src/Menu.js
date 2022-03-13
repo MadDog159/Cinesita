@@ -13,10 +13,13 @@ function Menu(props){
     const [modalOpen, setModalOpen] = useState(false);
     const handleInputChange = (e) => {
         console.log(e.target.value)
+        
         // console.log(event.target.value)
         props.setSearchMovie(e.target.value)
         
-        
+    }
+    function handleSubmit(e){
+        e.preventDefault()
     }
     return(
 
@@ -44,8 +47,8 @@ function Menu(props){
             </Navbar>
             <header className="menu">
                     <nav class="navbar">
-                        <form >
-                            <input type="text" placeholder="Search.." className="form-control" onChange={handleInputChange} name="nombre"></input>
+                        <form onSubmit={handleSubmit}>
+                            <input type="text" placeholder="Search.." className="form-control" onChange={handleInputChange} name="nombre" ></input>
                             
                             
                         </form>
