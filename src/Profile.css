@@ -1,46 +1,38 @@
-
 .modalBackground {
-    width: 300px;
-    height: 500px;
-    background-color: rgba(200, 200, 200, 0.062);
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: right;
-    z-index: 99;
-   
+  width: 300px;
+  height: 500px;
+  background-color: rgba(200, 200, 200, 0.062);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  z-index: 99;
+}
 
-  }
-
-.close{
-    float: right;
-
-
-
-
+.close {
+  float: right;
 }
 .modalContainer {
-    z-index: 100000;
-    width: 300px;
-    height: 500px;
-    border-radius: 12px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    position: absolute;
-    top: -10%;
-    align-items:center;
-    
-  }
-  .button {
-    background-color: #ff0000; 
-    border: none;
-    color: rgb(0, 0, 0);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  z-index: 100000;
+  width: 300px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: absolute;
+  top: -10%;
+  align-items: center;
+}
+.button {
+  background-color: #ff0000;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }

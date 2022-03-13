@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Nav } from "react-bootstrap";
 
 export const LoginButton = () => {
-    const { loginWithRedirect } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
 
-    return <Nav.Link onClick={() => loginWithRedirect()}>Login</Nav.Link>
-}
+  return <Nav.Link onClick={() => loginWithRedirect()}>Login</Nav.Link>;
+};
