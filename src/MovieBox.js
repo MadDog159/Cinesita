@@ -58,12 +58,12 @@ const MovieBox = ({ list }) => {
                             alt={list.title}
                         />
                     </Modal.Body>
-                    <Modal.Body>Lista de Géneros: {j.genres?.map((genero) => (<p key={genero.id}>{` ■ ${genero.name}  `})</p>))}</Modal.Body>
+                    <Modal.Body>Lista de Géneros: {j.genres?.map((genero) => (<p key={genero.id}>{`■ ${genero.name} `}</p>))}</Modal.Body>
                     <Modal.Body>Lenguaje original: {list.original_language}</Modal.Body>
                     <Modal.Body>Presupuesto: {j.budget}</Modal.Body>
                     <Modal.Body>Descripción: {list.overview}</Modal.Body>
                     <Modal.Body>Rating de popularidad: {list.popularity}</Modal.Body>
-                    <Modal.Body>■ Compañías de producción: {j.budget}</Modal.Body>
+                    <Modal.Body>Compañías de producción: {j.production_companies?.map((company) => (<p key={company.id}>{`■ ${company.name} `}</p>))}</Modal.Body>
                     <Modal.Body>Fecha de lanzamiento: {list.release_date}</Modal.Body>
                     <Modal.Body>Estado de la película: {j.status}</Modal.Body>
                     <Modal.Footer>
